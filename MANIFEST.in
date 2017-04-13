@@ -1,0 +1,3 @@
+graft rent_predictor/templates
+graft rent_predictor/static
+include data/data.h5

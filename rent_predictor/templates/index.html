@@ -1,0 +1,42 @@
+<!doctype html>
+<title>Rent Predictor</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Rent Predictor</h1>
+
+</div>
+
+{% block body %}
+  <h2>Enter values for prediction</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('index') }}" method=post>
+    <dl>
+      <dt>Floor area in square feet  (ex. 750)
+      <dd><input type=text name=sqft>
+      <dt># Bedrooms  (ex. 3)
+      <dd><input type=text name=beds>
+      <dt># Bathrooms  (ex. 1.5)
+      <dd><input type=text name=baths>
+      <dd><input type=submit value=Submit>
+    </dl>
+  </form>
+{% endblock %}
+
+
+{% if errors %}
+  {% for error in errors %}
+    <h4>{{ error }}</h4>
+  {% endfor %}
+{% else %}
+  <div>
+    {% if feature_values %}
+      <p>Sqft: {{ feature_values['sqft'] }}</p>
+      <p>Bedrooms: {{ feature_values['beds'] }}</p>
+      <p>Bathrooms: {{ feature_values['baths'] }}</p>
+    {% endif %}
+  </div>
+
+  {% if prediction %}
+    <h1>Predicted rent: ${{ prediction }}</h1>
+  {% endif %}
+{% endif %}
