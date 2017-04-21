@@ -1,0 +1,7 @@
+rent_predict.sublime*
+.DS_Store
+__pycache__
+/__pycache__
+local_setup*
+rent_predictor.egg-info/*
+venv
