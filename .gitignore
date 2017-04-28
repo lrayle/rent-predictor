@@ -5,3 +5,4 @@ __pycache__
 local_setup*
 rent_predictor.egg-info/*
 venv
+postgres_config.json

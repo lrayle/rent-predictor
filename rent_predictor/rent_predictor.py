@@ -90,10 +90,10 @@ def make_prediction():
     #     return render_template('index.html', errors=errors)
 
     # # TODO: look up feature values based on coordinates
-    #feature_values = ft.get_feature_values(feature_values)
+    #df_features = ft.get_feature_values(var_list=VARLIST, lng=features_values['lng'], lat=features_values['lat'])
 
     # run the prediction model
-    prediction = md.run_model(feature_values)
+    prediction = md.run_model(df_features)
     prediction = '{:,.0f}'.format(prediction)
     return render_template('index.html', feature_values=feature_values, prediction=prediction)
 

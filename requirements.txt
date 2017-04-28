@@ -12,8 +12,7 @@ psycopg2==2.7.1
 pyparsing==2.2.0
 python-dateutil==2.6.0
 pytz==2017.2
-## !! Could not determine repository location
-rent-predictor==0.0.0
+-e git+https://github.com/lrayle/rent-predictor.git@7880c5ffc7941549931c7e9227c994133e8f0525#egg=rent_predictor
 scikit-learn==0.18.1
 scipy==0.19.0
 six==1.10.0

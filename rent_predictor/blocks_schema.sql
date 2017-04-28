@@ -1,9 +1,10 @@
 --  schema for block variables table and way to copy data
+-- TODO: implement this. Copy block data.. 
 
 DROP TABLE IF EXISTS block_vars;
 CREATE TABLE block_vars
     (
-    id integer primary key autoincrement,
+    id bigserial primary key,
     varname1 int, -- fill these in. 
     varname2 real
     );
